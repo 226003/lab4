@@ -1,27 +1,42 @@
-#include <stdio.h>
-#include <string>
+#include <iostream>
+#include <cstring>
+#include <cmath>
+
+string NumberConversion (int n);
 
 int main(int argc, char *argv[])
 {
 	int n = atoi(argv[1]);
 
-	string words[5][10];
+	if (n == 0)
+		cout << "zero";
+	else if (n == 1000000)
+		cout << "milion";
 
-	// jednostki
-	words[0] = ("","jeden","dwa","trzy","cztery","piec","szesc","siedem","osiem","dziewiec");
-	// dziesiatki
-	words[1] = ( "jedenascie","dwanascie","trzynascie","czternascie","pietnascie","szesnascie","siedemnascie","osiemnascie","dziewietnascie");
-	// -nastki
-	words[2] = ("dziesiec","dwadziescia","trzydzieci","czterdziesci","piecdziesiat","szescdziesiat","siedemdziesiat","osiemdziesiat","dziewiecdziesiat");
-	// setki 
-	words[3] = ("sto","dwiescie","trzysta","czterysta","piecset","szescset","siedemset","osiemset","dziewiecset","szescset","siedemset","osiemset","dziewiecset");
-	// tysiace
-	words[4]=("tysiac","tysiace","tysiecy");
+	
+	NumberConversion(n);
 
-
-	int n_0 = n % 10;
-	int n_1 = n % 
 
 	
 	
+}
+
+string NumberConversion (int n)
+{
+	string words[5][10] = {
+		{"","jeden","dwa","trzy","cztery","piec","szesc","siedem","osiem","dziewiec"}
+		{"jedenascie","dwanascie","trzynascie","czternascie","pietnascie","szesnascie","siedemnascie","osiemnascie","dziewietnascie"}
+		{"","dziesiec ","dwadziescia ","trzydzieci ","czterdziesci ","piecdziesiat "," szescdziesiat ","siedemdziesiat ","osiemdziesiat ","dziewiecdziesiat "}
+		{"","sto ","dwiescie ","trzysta ","czterysta ","piecset ","szescset ","siedemset ","osiemset ","dziewiecset ","szescset ","siedemset ","osiemset ","dziewiecset "}
+		{"tysiac ","tysiace ","tysiecy "}
+	};
+
+	//int digits = (int)log10(n)+1; //ilosc cyfr
+	inr * index = new int[(int)log10(n)+1];
+	int p = 10;
+
+
+
+
+
 }
